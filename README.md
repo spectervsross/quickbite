@@ -1,30 +1,63 @@
 # Introducing QuickBite Summarizer
 
-![Product Logo](https://example.com/logo.png)
+<p align="center">
+  <img src="./Logo.jpg" alt="" width="200" height="200">
+</p>
+  
+**QuickBite Summarizer** is an article/text summarizer optimized for mobile. 
+Using the sharing function of your smartphone, send the content you want to summarize to the QuickBite Summarizer **WhatsApp** account, and a summary will be generated in less than a minute (usually within seconds to tens of seconds). 
+Check out the video below for a brief usage flow.
 
-**QuickBite Summarizer** is Mobile에 최적화된 아티클/텍스트 요약기 입니다. 
-스마트폰의 공유 기능을 이용해 요약하고자 하는 콘텐츠를 QuickBite Summarizer **왓츠앱** 계정으로 보내면 최대 1분안에 (대부분은 수초-수십초 내에) 요약을 생성합니다. 
-아래 비디오를 통해 간략한 이용 흐름을 확인해 보세요. 
 
 ## Video Overview
 
+<p style="margin-bottom: 20px;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<p style="margin-bottom: 20px;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<br>
 
 ## Features
 
-- ChatGPT API를 이용해 요약을 생성한다. 
-- 웹페이지, 트윗을 요약할 수 있다. 
+<p style="margin-bottom: 20px;">
+- Generates summaries using the ChatGPT API.
+</p>
+
+<p style="margin-bottom: 20px;">
+- Can summarize web pages and tweets.
+</p>
+
+<br>
 
 ## How to Use
 
-1. **Step 1**: 스마트폰의 공유 기능을 통해 QuickBite Summarizer의 왓츠앱 계정으로 요약할 콘텐츠를 공유합니다. URL만 추출하므로 텍스트가 포함되어도 상관 없다. 
-2. **Step 2**: 수초-수십초(최대 1분)내로 요약을 받는다. 
-3. **Step 3**: Save your time and Enjoy your contents
+<p style="margin-bottom: 20px;">
+  
+1. **Step 1**: Share the content you want to summarize to the QuickBite Summarizer WhatsApp account using your smartphone's sharing function. It doesn't matter if text is included as only the URL is extracted.
+</p>
 
-## Join Eearly Acssess Program
-현재 QuickBite Summarizer는 베타 단계입니다. 얼리 액서스 프로그램에 지원하여 베타기간 동안 무료로 QuickBite Summarizer를 사용해 보세요.
-다음 URL에서 신청하세요. [website](https://paperform.co/edit/2gkiqsye) 
+<p style="margin-bottom: 20px;">
+  
+2. **Step 2**: Receive the summary within seconds to tens of seconds (up to a minute).
+</p>
+
+<p style="margin-bottom: 20px;">
+
+  3. **Step 3**: Save your time and enjoy your contents.
+</p>
+
+<br>
+
+## Join Early Access Program
+
+<p style="margin-bottom: 20px;">
+Currently, QuickBite Summarizer is in the beta stage. Apply for the Early Access Program and use QuickBite Summarizer for free during the beta period. 
+Apply at the following URL: [website](https://paperform.co/edit/2gkiqsye)
+</p>
 
 ---
 
