@@ -1,211 +1,48 @@
 <!DOCTYPE html>
-<html lang="en"
-  ><head
-    ><title>QuickBite Youtube Summarization via Whatsapp</title
-    ><meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    /><meta charset="utf-8" /><meta
-      property="twitter:card"
-      content="summary_large_image"
-    /><style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }</style
-    ><style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
-
-      }</style
-    ><link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    /><link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    /><style>
-      @keyframes fade-in-left {
-        0% {
-          opacity: 0;
-          transform: translateX(-20px);
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing QuickBite Summarizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
         }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
+        h1, h2 {
+            text-align: center;
         }
-      }
-    </style></head
-  ><body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-        <link href="./index.css" rel="stylesheet" />
-        <div class="home-container">
-            <div class="home-header">
-                <header data-thq="thq-navbar" class="navbarContainer home-navbar-interactive">
-                    <span class="logo">QUICKBITE AI</span>
-                    <div data-thq="thq-navbar-nav" class="home-desktop-menu">
-                        <div class="home-buttons">
-                        </div>
-                    </div>
-                </header>
-            </div>
-            <div class="home-hero">
-                <div class="heroContainer home-hero1">
-                    <div class="home-container01">
-                        <h1 class="home-hero-heading heading1">Get QuickBite Summaries</h1>
-                        <span class="home-hero-sub-heading bodyLarge">
-                            QuickBite AI is a third-party service that summarizes YouTube videos via WhatsApp.<br> We understand that you don't always have the time to watch a full video, so we've created a convenient AI solution to help you stay informed on-the-go.
-                        </span>
-                        <div class="home-btn-group">
-                            <button class="buttonFilled">Try Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="home-features">
-                <div class="featuresContainer">
-                    <div class="home-features1">
-                        <div class="home-container02">
-                            <span class="overline">features</span>
-                            <h2 class="home-features-heading heading2">Features of QuickBite</h2>
-                            <span class="home-features-sub-heading bodyLarge">Simplify your video-watching experience with QuickBite's features</span>
-                        </div>
-                        <div class="home-container03">
-                            <!-- Features Cards Updated with Provided Content -->
-                            <div class="featuresCard home-feature-card">
-                                <h3 class="home-text31">Quick Summaries</h3>
-                                <span>Get concise summaries of YouTube videos</span>
-                            </div>
-                            <div class="featuresCard home-feature-card1">
-                                <h3 class="home-text33 heading3">Fast Delivery</h3>
-                                <span>Receive your video summaries quickly on WhatsApp</span>
-                            </div>
-                            <div class="featuresCard home-feature-card2">
-                                <h3 class="home-text35">Easy Submission</h3>
-                                <span>Simply share the YouTube link with our WhatsApp account</span>
-                            </div>
-                            <div class="featuresCard home-feature-card3">
-                                <h3 class="home-text40">Convenient Access</h3>
-                                <span>Access your summarized videos anytime, anywhere on mobile</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="home-pricing">
-                <div class="pricingContainer">
-                    <div class="home-container08">
-                        <span class="overline">Pricing</span>
-                        <h2 class="heading2">Choose Your QuickBite Plan</h2>
-                        <span>Select the plan that suits your needs best</span>
-                    </div>
-                    <div class="home-container09">
-                        <!-- Pricing Cards Updated with Provided Content -->
-                        <div class="freePricingCard home-pricing-card">
-                            <span class="home-text47 heading3">Free</span>
-                            <span>Enjoy basic video summaries for free</span>
-                            <span class="home-free-plan-price">0</span>
-                            <span>Summarize up to 5 videos per month</span>
-                            <span>Access to basic summarization tools</span>
-                            <span>Limited customization options</span>
-                            <span>Email support</span>
-                        </div>
-                        <div class="basicPricingCard home-pricing-card1">
-                            <span class="home-text55 heading3">BASIC</span>
-                            <span>Upgrade for more features and flexibility</span>
-                            <span class="home-basic-plan-pricing">9.99 / month</span>
-                            <span>All features of FREE plan</span>
-                            <span>Summarize up to 20 videos per month</span>
-                            <span>Access to advanced summarization tools</span>
-                            <span>Customizable summary templates</span>
-                            <span>Priority email support</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="home-footer">
-                <footer class="footerContainer home-footer1">
-                    <span class="bodySmall home-text79">© 2024 QuickBite, All Rights Reserved.</span>
-                </footer>
-            </div>
-        </div>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introducing QuickBite Summarizer</h1>
+    <div class="center">
+        <img src="./Logo.jpg" alt="Product Logo" width="200" height="200">
     </div>
-    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-     <div class="home-footer">
-            <!-- Privacy Policy Section -->
-            <div class="privacy-policy" style="padding: 20px 0; background-color: #f4f4f4; width: 100%;">
-                <div style="margin: auto; max-width: 1200px; padding: 0 20px;">
-                    <h2>Privacy Policy</h2>
-                    <p>At QuickBite, we take your privacy seriously. We collect only the necessary information to provide our service, and we never share your data with third parties. <a href="link-to-privacy-policy">here</a>.</p>
-                </div>
-            </div>
-
-            <!-- Footer Section -->
-            <footer class="footerContainer home-footer1" style="padding: 20px 0; background-color: #333; color: white; width: 100%;">
-                <div style="margin: auto; max-width: 1200px; padding: 0 20px; text-align: center;">
-                    <span class="bodySmall home-text79">© 2024 QuickBite, All Rights Reserved.</span>
-                </div>
-            </footer>
-        </div>
+    <p><strong>QuickBite Summarizer</strong> is an article/text summarizer optimized for mobile. Using the sharing function of your smartphone, send the content you want to summarize to the QuickBite Summarizer <strong>WhatsApp</strong> account, and a summary will be generated in less than a minute (usually within seconds to tens of seconds). Check out the video below for a brief usage flow.</p>
+    <h2>Video Overview</h2>
+    <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <h2>Features</h2>
+    <ul>
+        <li>Generates summaries using the ChatGPT API.</li>
+        <li>Can summarize web pages and tweets.</li>
+    </ul>
+    <h2>How to Use</h2>
+    <ol>
+        <li><strong>Step 1</strong>: Share the content you want to summarize to the QuickBite Summarizer WhatsApp account using your smartphone's sharing function. It doesn't matter if text is included as only the URL is extracted.</li>
+        <li><strong>Step 2</strong>: Receive the summary within seconds to tens of seconds (up to a minute).</li>
+        <li><strong>Step 3</strong>: Save your time and enjoy your contents.</li>
+    </ol>
+    <h2>Join Early Access Program</h2>
+    <p>Currently, QuickBite Summarizer is in the beta stage. Apply for the Early Access Program and use QuickBite Summarizer for free during the beta period. Apply at the following URL: <a href="https://paperform.co/edit/2gkiqsye">website</a></p>
+    <hr>
+    <p>© 2024 QuickBite Summarizer</p>
 </body>
-  
 </html>
