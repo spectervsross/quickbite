@@ -24,11 +24,13 @@ Check out the video below for a brief usage flow.
 ## Features
 
 <p style="margin-bottom: 20px;">
-- Generates summaries using the ChatGPT API.
+  
+- **AI-Powered Summaries**: Generates summaries using the ChatGPT API.
 </p>
 
 <p style="margin-bottom: 20px;">
-- Can summarize web pages and tweets.
+  
+- **Versatile Summarization**: Can summarize web pages and tweets.
 </p>
 
 <br>
