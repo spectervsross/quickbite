@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introducing QuickBite Summarizer</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,6 +57,9 @@
         ol.no-numbers li::before {
             content: none;
         }
+        .custom-line-height li {
+            line-height: 1; /* Adjust this value to your preference */
+        }
     </style>
 </head>
 <body>
@@ -79,7 +83,7 @@
     <ul class="section">
         <li><strong>AI-Powered Summaries:</strong> Generates summaries using the ChatGPT API</li>
         <li><strong>Versatile Summarization:</strong> Can summarize various types of content, including:</li>
-        <ul>
+        <ul class="custom-line-height">
             <li>Web pages</li>
             <li>Tweets</li>
             <li>News articles</li>
