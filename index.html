@@ -1,174 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-YDSX2L3J42"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-YDSX2L3J42");
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickBite Summarizer</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img src="img/logo.svg" alt="" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-        </ul>
-      </nav>
-      <div class="header-content">
-        <div class="left-content">
-          <h1>Introducing QuickBite Summarizer</h1>
-          <p>
-            QuickBite Summarizer is an article/text summarizer optimized for
-            smartphones. Share content with QuickBite Summarizer on
-            <strong>WhatsApp</strong> to get a summary in less than a minute
-            (usually within seconds).
-          </p>
-          <input type="email" placeholder="Email Address" />
-          <button>Get Started</button>
-        </div>
-        <div class="right-content">
-          <img src="./Logo.jpg" alt="Product Logo" width="200" height="200" />
-        </div>
-      </div>
-    </header>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    <main>
-      <section class="section-one">
-        <h2>Video Overview</h2>
-        <div class="features">
-          <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/Kqo0ZHl2Q4w"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/3JPT17s-JMs"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 3em;
+        }
+
+        h2 {
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        p, ul, ol, li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .logo-container {
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #5cb85c;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background-color: #4cae4c;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #7541f0;
+            color: white;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Introducing QuickBite Summarizer</h1>
+        <p>QuickBite Summarizer is an article/text summarizer optimized for smartphones. Share content with QuickBite Summarizer on <strong>WhatsApp</strong> to get a summary in less than a minute (usually within seconds).</p>
+        <input type="email" placeholder="Email Address">
+        <button class="cta-button" style="background-color: #7541f0;">Get Started</button>
+        <div class="logo-container">
+            <img src="https://rebrand.ly/logo" alt="QuickBite Logo" width="150"> 
         </div>
-      </section>
-      <section class="section-two">
-        <div class="left-content">
-          <h2>Features</h2>
-          <ul>
-            <li>
-              <strong>AI-Powered Summaries:</strong> Generates summaries using
-              the ChatGPT API.
+
+        <h2>Video Overview</h2> 
+
+        <h2>Features</h2>
+        <ul>
+            <li><strong>AI-Powered Summaries:</strong> Generates summaries using the ChatGPT API.</li>
+            <li><strong>Versatile Summarization:</strong> Can summarize various types of content, including:
+                <ul>
+                    <li>Web pages</li>
+                    <li>Tweets</li>
+                    <li>News articles</li>
+                    <li>Blog posts</li>
+                    <li><strong>Capable of summarizing anything with a URL</strong></li>
+                </ul>
             </li>
-            <li>
-              <strong>Versatile Summarization:</strong> Can summarize various
-              types of content, including:
-              <ul>
-                <li>Web pages</li>
-                <li>Tweets</li>
-                <li>News articles</li>
-                <li>Blog posts</li>
-                <li>
-                  <strong>Capable of summarizing anything with a URL</strong>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="right-content">
-          <div class="img-container">
-            <img src="img/side-img1.png" alt="" />
-          </div>
-        </div>
-      </section>
-      <section class="section-three">
-        <div class="left-content">
-          <div class="img-container">
-            <img src="img/side-img2.png" alt="" />
-          </div>
-        </div>
-        <div class="right-content">
-          <h2>How to use</h2>
-          <ol>
-            <li>
-              <strong>Step 1:</strong> Share content with QuickBite Summarizer
-              on WhatsApp using your phone's share feature.
-            </li>
-            <li>
-              <strong>Step 2:</strong> Receive the summary within seconds (up to
-              a minute).
-            </li>
-            <li>
-              <strong>Step 3:</strong> Boom! Enjoy your QuickBite summary.
-            </li>
-          </ol>
-        </div>
-      </section>
-      <section class="section-four">
-        <div class="left-content">
-          <h2>Join the <strong>Free</strong> Early Access Program</h2>
-          <p>
-            Apply for the exclusive Early Access Program and use QuickBite
-            Summarizer for <strong>free</strong> during the beta period.
-          </p>
-          <p>
-            You will have a daily quota limit of 10 Bites(=10 summaries) per day
-            during the Early Access Program. The duration of the Early Access
-            Program and the number of Bite used per day are subject to change at
-            any time without notice.
-          </p>
-        </div>
-        <div class="right-content">
-          <div class="img-container">
-            <img src="img/side-img3.png" alt="" />
-          </div>
-        </div>
-      </section>
-      <section class="section-five">
-        <div class="pricing-cards">
-          <div class="pricing-card">
-            <a
-              href="https://rebrand.ly/x1kagio"
-              class="cta-button"
-              target="_blank"
-              >Visit QuickBite Whatsapp</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
+        </ul>
+
+        <img src="https://rebrand.ly/image1" alt="Image 1" width="100%"> 
+
+        <h2>How to use</h2>
+        <ol>
+            <li><strong>Step 1:</strong> Share content with QuickBite Summarizer on WhatsApp using your phone's share feature.</li>
+            <li><strong>Step 2:</strong> Receive the summary within seconds (up to a minute).</li>
+            <li><strong>Step 3:</strong> Boom! Enjoy your QuickBite summary.</li>
+        </ol>
+
+        <h2>Join the Free Early Access Program</h2>
+        <p>Apply for the exclusive Early Access Program and use QuickBite Summarizer for <strong>free</strong> during the beta period.</p>
+        <p>You will have a daily quota limit of 10 Bites(=10 summaries) per day during the Early Access Program. The duration of the Early Access Program and the number of Bite used per day are subject to change at any time without notice.</p>
+        <img src="https://rebrand.ly/image2" alt="Image 2" width="100%"> 
+        <a href="https://rebrand.ly/whatsapp-link" class="cta-button">Visit QuickBite Whatsapp</a>
+    </div>
 
     <footer>
-      <div class="footer-content">
         <p>© 2024 QuickBite Summarizer</p>
-      </div>
     </footer>
-  </body>
+</body>
 </html>
