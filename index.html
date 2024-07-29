@@ -2,54 +2,71 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YDSX2L3J42"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDSX2L3J42"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-YDSX2L3J42');
-</script>
+        gtag('config', 'G-YDSX2L3J42');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickBite Summarizer</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 40px;
+            margin: 0; /* Reset default margin */
+            background-color: #f5f5f5; /* Set a light background color */
+            color: #333; /* Set a dark text color */
         }
+
+        /* Container for content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff; /* White background for content area */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
         h1, h2 {
             text-align: center;
         }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
         h2 {
-            margin-top: 100px;
+            margin-top: 60px;
+            margin-bottom: 30px;
         }
-        p, ul, ol, div, li {
-            margin-bottom: 20px; /* Add space between paragraphs */
+
+        p, ul, ol, li {
+            margin-bottom: 15px; /* Adjust spacing between elements */
+            line-height: 1.6; /* Improve readability */
         }
-        
-        li, p {
-            line-height: 1.2; /* Increase line spacing for paragraphs */
+
+        ul, ol {
+            padding-left: 20px; /* Indent lists */
         }
 
         .center {
             text-align: center;
         }
-        .section {
-            margin-bottom: 20px; /* Add more space between sections */
-        }
+
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
             max-width: 100%;
-            background: #000;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -58,91 +75,98 @@
             height: 100%;
             border: 0;
         }
+
         .no-bottom-margin {
-            margin-bottom: 0; /* Remove bottom margin */
+            margin-bottom: 0;
         }
-        /* Remove numbering from ordered list */
-        ol.no-numbers {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ol.no-numbers li::before {
-            content: none;
-        }
-        .custom-line-height li {
-            line-height: 1; /* Adjust this value to your preference */
-        }
-        .section-bottom {
-            margin-bottom: 80px; /* Remove bottom margin */
-        }
+
+        /* Button Styles */
         .cta-button {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            font-size: 16px;
+            padding: 12px 25px;
+            font-size: 18px;
             font-weight: bold;
             color: white;
-            background-color: #007BFF;
+            background-color: #5cb85c; /* Green color for the button */
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            border: none; /* Remove default button border */
         }
-        
+
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #4cae4c; /* Darker green on hover */
+            cursor: pointer; /* Change cursor to pointer on hover */
         }
-         .center {
+
+        /* Footer Styles */
+        footer {
             text-align: center;
+            padding: 20px 0;
+            background-color: #f8f8f8; /* Light grey background for footer */
+            margin-top: 60px; /* Add spacing between content and footer */
         }
-        
     </style>
 </head>
 <body>
+
+<div class="container">
     <h1>Introducing QuickBite Summarizer</h1>
-    <div class="center section no-bottom-margin">
+
+    <div class="center">
         <img src="./Logo.jpg" alt="Product Logo" width="200" height="200">
     </div>
-    <ul class="section">
-        <li><strong>QuickBite Summarizer</strong> is an article/text summarizer optimized for smartphones.</li>
-        <li>Share content with QuickBite Summarizer on <strong>WhatsApp</strong> to get a summary in less than a minute (usually within seconds).</li>
-        <li>Check out the video below for a quick tutorial.</li>
-    </ul>
-    <h2 class="section">Video Overview</h2>
-    <div class="center section video-container">
+
+    <p><strong>QuickBite Summarizer</strong> is an article/text summarizer optimized for smartphones. Share content with QuickBite Summarizer on <strong>WhatsApp</strong> to get a summary in less than a minute (usually within seconds).</p>
+
+    <h2>Video Overview</h2>
+
+    <div class="video-container">
         <iframe src="https://www.youtube.com/embed/Kqo0ZHl2Q4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <div class="center section video-container">
+
+    <div class="video-container">
         <iframe src="https://www.youtube.com/embed/3JPT17s-JMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+
     <h2>Features</h2>
-    <ul class="section">
+
+    <ul>
         <li><strong>AI-Powered Summaries:</strong> Generates summaries using the ChatGPT API.</li>
-        <li><strong>Versatile Summarization:</strong> Can summarize various types of content, including :</li>
-        <ul class="custom-line-height">
-            <li>Web pages</li>
-            <li>Tweets</li>
-            <li>News articles</li>
-            <li>Blog posts</li>
-            <li><strong>Capable of summarizing anything with a URL</strong></li>
-        </ul>
+        <li><strong>Versatile Summarization:</strong> Can summarize various types of content, including:
+            <ul>
+                <li>Web pages</li>
+                <li>Tweets</li>
+                <li>News articles</li>
+                <li>Blog posts</li>
+                <li><strong>Capable of summarizing anything with a URL</strong></li>
+            </ul>
+        </li>
     </ul>
+
     <h2>How to use</h2>
-    <ol class="section no-numbers">
+
+    <ol>
         <li><strong>Step 1:</strong> Share content with QuickBite Summarizer on WhatsApp using your phone's share feature.</li>
         <li><strong>Step 2:</strong> Receive the summary within seconds (up to a minute).</li>
         <li><strong>Step 3:</strong> Boom! Enjoy your QuickBite summary.</li>
     </ol>
-    
+
     <h2>Join the <strong>Free</strong> Early Access Program</h2>
-    <ul>
-        <li>Apply for the exclusive Early Access Program and use QuickBite Summarizer for <strong>free</strong> during the beta period.</li>
-        <li>You will have a daily quota limit of 10 Bites(=10 summaries) per day during the Early Access Program.</li>
-        <li>The duration of the Early Access Program and the number of Bite used per day are subject to change at any time without notice.</li>
-    </ul>
+
+    <p>Apply for the exclusive Early Access Program and use QuickBite Summarizer for <strong>free</strong> during the beta period.</p>
+    <p>You will have a daily quota limit of 10 Bites(=10 summaries) per day during the Early Access Program. The duration of the Early Access Program and the number of Bite used per day are subject to change at any time without notice.</p>
+
     <div class="center">
-    <h3><a href="https://rebrand.ly/x1kagio" class="cta-button">Visit QuickBite Whatsapp </a></h3><hr>
+        <a href="https://rebrand.ly/x1kagio" class="cta-button">Visit QuickBite Whatsapp</a>
     </div>
-        <p>© 2024 QuickBite Summarizer</p>
+
+</div>
+
+<footer>
+    <p>© 2024 QuickBite Summarizer</p>
+</footer>
+
 </body>
 </html>
