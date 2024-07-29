@@ -1,172 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDSX2L3J42"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YDSX2L3J42"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-YDSX2L3J42');
+      gtag("config", "G-YDSX2L3J42");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuickBite Summarizer</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0; /* Reset default margin */
-            background-color: #f5f5f5; /* Set a light background color */
-            color: #333; /* Set a dark text color */
-        }
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0; /* Reset default margin */
+        background-color: #f5f5f5; /* Set a light background color */
+        color: #333; /* Set a dark text color */
+      }
 
-        /* Container for content */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: #fff; /* White background for content area */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-        }
+      /* Container for content */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff; /* White background for content area */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
 
-        h1, h2 {
-            text-align: center;
-        }
+      h1,
+      h2 {
+        text-align: center;
+      }
 
-        h1 {
-            margin-bottom: 20px;
-        }
+      h1 {
+        margin-bottom: 20px;
+      }
 
-        h2 {
-            margin-top: 60px;
-            margin-bottom: 30px;
-        }
+      h2 {
+        margin-top: 60px;
+        margin-bottom: 30px;
+      }
 
-        p, ul, ol, li {
-            margin-bottom: 15px; /* Adjust spacing between elements */
-            line-height: 1.6; /* Improve readability */
-        }
+      p,
+      ul,
+      ol,
+      li {
+        margin-bottom: 15px; /* Adjust spacing between elements */
+        line-height: 1.6; /* Improve readability */
+      }
 
-        ul, ol {
-            padding-left: 20px; /* Indent lists */
-        }
+      ul,
+      ol {
+        padding-left: 20px; /* Indent lists */
+      }
 
-        .center {
-            text-align: center;
-        }
+      .center {
+        text-align: center;
+      }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            margin-bottom: 30px;
-        }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
 
-        .no-bottom-margin {
-            margin-bottom: 0;
-        }
+      .no-bottom-margin {
+        margin-bottom: 0;
+      }
 
-        /* Button Styles */
-        .cta-button {
-            display: inline-block;
-            padding: 12px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            background-color: #5cb85c; /* Green color for the button */
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            border: none; /* Remove default button border */
-        }
+      /* Button Styles */
+      .cta-button {
+        display: inline-block;
+        padding: 12px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #5cb85c; /* Green color for the button */
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        border: none; /* Remove default button border */
+      }
 
-        .cta-button:hover {
-            background-color: #4cae4c; /* Darker green on hover */
-            cursor: pointer; /* Change cursor to pointer on hover */
-        }
+      .cta-button:hover {
+        background-color: #4cae4c; /* Darker green on hover */
+        cursor: pointer; /* Change cursor to pointer on hover */
+      }
 
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f8f8; /* Light grey background for footer */
-            margin-top: 60px; /* Add spacing between content and footer */
-        }
+      /* Footer Styles */
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #f8f8f8; /* Light grey background for footer */
+        margin-top: 60px; /* Add spacing between content and footer */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links"></ul>
+      </nav>
+      <div class="header-content">
+        <div class="left-content">
+          <h1></h1>
+          <p></p>
+          <input type="email" placeholder="" />
+          <button></button>
+        </div>
+        <div class="right-content"></div>
+      </div>
+    </header>
 
-<div class="container">
-    <h1>Introducing QuickBite Summarizer</h1>
+    <main>
+      <section class="section-one">
+        <h2></h2>
+        <p></p>
+        <div class="features"></div>
+        <button></button>
+      </section>
+      <section class="section-two">
+        <div class="left-content">
+          <h2></h2>
+          <p></p>
+          <div class="chat-container">
+            <div class="chat">
+              <p></p>
+              <span></span>
+            </div>
+            <div class="chat-img">
+              <img src="" alt="" />
+              <p></p>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="section-three">
+        <div class="left-content">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+        </div>
+        <div class="right-content">
+          <h2></h2>
+          <p></p>
+          <div class="chat-container">
+            <div class="chat-img">
+              <img src="" alt="" />
+              <p></p>
+              <span></span>
+            </div>
+            <div class="chat">
+              <p></p>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-four">
+        <div class="left-content">
+          <h2></h2>
+          <p></p>
+          <div class="chat-container">
+            <div class="chat">
+              <p></p>
+              <span></span>
+            </div>
+            <div class="chat-img">
+              <img src="" alt="" />
+              <p></p>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="section-five">
+        <h2></h2>
+        <p></p>
+        <div class="pricing-cards"></div>
+      </section>
+      <section class="section-six">
+        <h2></h2>
+        <p></p>
+        <div class="choose-cards"></div>
+      </section>
+      <section class="section-seven">
+        <div class="left-content"></div>
+        <div class="right-content">
+          <h1></h1>
+          <p></p>
+          <input type="email" placeholder="" />
+          <button></button>
+        </div>
+      </section>
+    </main>
 
-    <div class="center">
-        <img src="./Logo.jpg" alt="Product Logo" width="200" height="200">
-    </div>
-
-    <p><strong>QuickBite Summarizer</strong> is an article/text summarizer optimized for smartphones. Share content with QuickBite Summarizer on <strong>WhatsApp</strong> to get a summary in less than a minute (usually within seconds).</p>
-
-    <h2>Video Overview</h2>
-
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/Kqo0ZHl2Q4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/3JPT17s-JMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <h2>Features</h2>
-
-    <ul>
-        <li><strong>AI-Powered Summaries:</strong> Generates summaries using the ChatGPT API.</li>
-        <li><strong>Versatile Summarization:</strong> Can summarize various types of content, including:
-            <ul>
-                <li>Web pages</li>
-                <li>Tweets</li>
-                <li>News articles</li>
-                <li>Blog posts</li>
-                <li><strong>Capable of summarizing anything with a URL</strong></li>
-            </ul>
-        </li>
-    </ul>
-
-    <h2>How to use</h2>
-
-    <ol>
-        <li><strong>Step 1:</strong> Share content with QuickBite Summarizer on WhatsApp using your phone's share feature.</li>
-        <li><strong>Step 2:</strong> Receive the summary within seconds (up to a minute).</li>
-        <li><strong>Step 3:</strong> Boom! Enjoy your QuickBite summary.</li>
-    </ol>
-
-    <h2>Join the <strong>Free</strong> Early Access Program</h2>
-
-    <p>Apply for the exclusive Early Access Program and use QuickBite Summarizer for <strong>free</strong> during the beta period.</p>
-    <p>You will have a daily quota limit of 10 Bites(=10 summaries) per day during the Early Access Program. The duration of the Early Access Program and the number of Bite used per day are subject to change at any time without notice.</p>
-
-    <div class="center">
-        <a href="https://rebrand.ly/x1kagio" class="cta-button">Visit QuickBite Whatsapp</a>
-    </div>
-
-</div>
-
-<footer>
-    <p>© 2024 QuickBite Summarizer</p>
-</footer>
-
-</body>
+    <footer>
+      <div class="footer-content"><p></p></div>
+    </footer>
+  </body>
 </html>
