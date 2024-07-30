@@ -1,362 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+import React from 'react';
+import { Phone, Smartphone, Zap, Share2, Book, Star, Check } from 'lucide-react';
 
-    <title>QuickBite Summarizer</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+const Header = () => (
+  <header className="bg-white shadow-sm">
+    <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <div className="flex items-center">
+        <img src="/api/placeholder/40/40" alt="QuickBite Logo" className="h-8 w-auto" />
+        <span className="ml-2 text-xl font-bold text-gray-800">QuickBite</span>
+      </div>
+      <div className="hidden md:flex space-x-4">
+        <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
+        <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How It Works</a>
+        <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
+      </div>
+      <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+        Get Started
+      </button>
+    </nav>
+  </header>
+);
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #64748b;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-        }
+const HeroSection = () => (
+  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-3xl mx-auto text-center">
+      <h1 className="text-4xl font-bold mb-4">Instant Summaries in Your Pocket</h1>
+      <p className="text-xl mb-8">Turn long content into quick, mobile-friendly summaries with just a tap</p>
+      <div className="flex justify-center items-center space-x-4">
+        <button className="bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300">
+          Start Summarizing Now
+        </button>
+        <a href="#how-it-works" className="text-white underline flex items-center">
+          <Phone className="mr-2" size={20} />
+          See How It Works
+        </a>
+      </div>
+    </div>
+  </div>
+);
 
-        .container {
-            max-width: 100%;
-        }
+const FeatureCard = ({ icon: Icon, title, description }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md">
+    <Icon className="text-blue-500 w-12 h-12 mb-4" />
+    <h3 className="font-bold text-lg mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
 
-        header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
+const FeaturesSection = () => (
+  <section id="features" className="py-20 bg-gray-100">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-bold text-center mb-12">Why Choose QuickBite?</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <FeatureCard
+          icon={Smartphone}
+          title="Mobile Optimized"
+          description="Perfect for small screens, no more endless scrolling"
+        />
+        <FeatureCard
+          icon={Zap}
+          title="Lightning Fast"
+          description="Get summaries in seconds, ideal for busy mobile users"
+        />
+        <FeatureCard
+          icon={Share2}
+          title="Easy Sharing"
+          description="Share concise summaries via your favorite mobile apps"
+        />
+        <FeatureCard
+          icon={Book}
+          title="Offline Access"
+          description="Save summaries for when you're not connected"
+        />
+      </div>
+    </div>
+  </section>
+);
 
-        .subtitle {
-            color: #7c3aed;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            margin-bottom: 16px;
-        }
-
-        h1, h2, h3 {
-            color: #1e293b;
-            margin-top: 0;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .header-description {
-            max-width: 600px;
-            margin: 0 auto 32px;
-            font-size: 18px;
-        }
-
-        .btn {
-            background-color: #7c3aed;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 9999px;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s;
-            font-weight: 600;
-        }
-
-        .btn:hover {
-            background-color: #6d28d9;
-        }
-
-        .feature {
-        background-color: white;
-        width: 100vw;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        }
-        
-
-        .feature-image {
-            flex: 1;
-            margin-right: 60px;
-        }
-
-        .feature-content {
-            flex: 1;
-        }
-
-        .feature-title {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .feature-description {
-            font-size: 18px;
-        }
-
-        .services {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 80px;
-        }
-
-        .service {
-            flex: 1;
-            margin: 0 20px;
-            text-align: center;
-        }
-
-        .service-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1e293b;
-        }
-
-        .pricing {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 80px;
-        }
-
-        .price-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-
-        .price {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #1e293b;
-        }
-
-        .price-description {
-            margin-bottom: 24px;
-        }
-
-        .price-features {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 32px;
-        }
-
-        .price-features li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-        }
-
-        .price-features li::before {
-            content: "✓";
-            color: #22c55e;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-
-        .footer-social {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 80px;
-        }
-
-        .social-icon {
-            color: #7c3aed;
-            transition: color 0.3s;
-        }
-
-        .social-icon:hover {
-            color: #6d28d9;
-        }
-
-        /* 반응형 디자인을 위한 미디어 쿼리 추가 */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            .header-description {
-                font-size: 16px;
-            }
-
-            .feature {
-                flex-direction: column;
-            }
-
-            .feature-image, .feature-content {
-                width: 100%;
-                margin: 0 0 20px 0;
-            }
-
-            .services {
-                flex-direction: column;
-            }
-
-            .service {
-                margin: 0 0 20px 0;
-            }
-
-            .pricing {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .price-card {
-                width: 100%;
-                max-width: 300px;
-                margin-bottom: 20px;
-            }
-        }
-
-        /* 더 작은 화면을 위한 추가 미디어 쿼리 */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 28px;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-        }
-
-        /* New Approach - Apply background to the container */
-        .feature:nth-child(3) { /* Target the 3rd .feature section */
-            background-color: white; 
-            width: 100%; /* Ensure full width */
-        }
-
-        /* Optional: Center content within the container */
-        .feature:nth-child(3) .feature-content {
-            text-align: center; 
-        }
-
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <p class="subtitle">Introducing</p>
-            <h1>QuickBite Summarizer</h1>
-            <p class="header-description">Summarize contents within few click on your smartphone</p>
-            <a href="#" class="btn">Try Free</a>
-        </header>
-
-        <main>
-            <div class="feature-content" style="text-align: center;">
-                <h2 class="feature-title">AI-Powered Summaries</h2>
-                <p class="feature-description">Generates summaries using the ChatGPT API</p>
-            </div>
-                <div class="feature-image">
-                    <div style="text-align: center;">
-                        <iframe width="100%" height="400" src="https://youtu.be/Lo8H8bGo0GU" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-
-            </section>
-
-            <section class="feature" style="text-align: center;margin-top: 40px;"> 
-                <div class="feature"> 
-                    <!-- Versatile Summarization 위쪽에 마진 추가 -->
-                    <h1 style="color: white;">dd</h1>
-                    <h2 class="feature-title" style="margin-top: 0px; ">Versatile Summarization</h2> <!-- margin-top을 60px에서 80px로 변경 -->
-                    <p class="feature-description" style="text-align: center;">Can summarize various types of content,
-                        including:</p>
-                    <div style="max-width: 300px; margin: 0 auto; text-align: left;">
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 10px;">• Webpage</li>
-                            <li style="margin-bottom: 10px;">• News/Article</li>
-                            <li style="margin-bottom: 10px;">• Blog posts</li>
-                            <li style="margin-bottom: 10px;">• Tweets</li>
-                            <li style="margin-bottom: 20px;">• YouTube Video (coming soon)</li>
-                        </ul>
-                        <h1 style="color: white;">dd</h1>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="services">
-                <div class="service">
-                    <h3 class="subtitle">Step 0</h3>
-                    <p>Install Whatsapp if you don't have it</p>
-                </div>
-                <div class="service">
-                    <h3 class="subtitle">Step 1</h3>
-                    <p>Share content with QuickBite Summarizer on WhatsApp using your phone's share feature</p>
-                </div>
-                <div class="service">
-                    <h3 class="subtitle">Step 2</h3>
-                    <p>Receive the summary within seconds (up to a minute)</p>
-                </div>
-                <div class="service">
-                    <h3 class="subtitle">Step 3</h3>
-                    <p>Boom! Enjoy your QuickBite summary</p>
-                </div>
-            </section>
-
-
-
-            <section class="pricing">
-                <div class="price-card">
-                    <h3 class="price">$99</h3>
-                    <p class="price-description">Blandit massa enim nec dui nunc. Non pulvinar neque laoreet suspendisse
-                        interdum.</p>
-                    <ul class="price-features">
-                        <li>Mi tempus imperdiet</li>
-                        <li>Faucibus interdum posuere</li>
-                        <li>In nulla posuere sollicitudin</li>
-                        <li>Curabitur turpis cursus</li>
-                        <li>Integer a semi imperdiet</li>
-                    </ul>
-                    <a href="#" class="btn">Select →</a>
-                </div>
-                <div class="price-card">
-                    <h3 class="price" style="color: #7c3aed;">$149</h3>
-                    <p class="price-description">Blandit massa enim nec dui nunc. Non pulvinar neque laoreet suspendisse
-                        interdum.</p>
-                    <ul class="price-features">
-                        <li>Mi tempus imperdiet</li>
-                        <li>Faucibus interdum posuere</li>
-                        <li>In nulla posuere sollicitudin</li>
-                        <li>Curabitur turpis cursus</li>
-                        <li>Integer a semi imperdiet</li>
-                    </ul>
-                    <a href="#" class="btn">Select →</a>
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-            <div class="footer-social">
-                <a href="#" class="social-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                </a>
-                <a href="#" class="social-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </a>
-                <a href="#" class="social-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57>
-           
-                    </svg>
-                </a>
-            </div>
-        </footer>
+const HowItWorksSection = () => (
+  <section id="how-it-works" className="py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+      <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
+        <div className="flex-1">
+          <ol className="space-y-6">
+            {[
+              "Install QuickBite on your smartphone",
+              "Share any content with QuickBite via your favorite apps",
+              "Receive an AI-powered summary within seconds",
+              "Read, save, or share the concise summary instantly"
+            ].map((step, index) => (
+              <li key={index} className="flex items-center">
+                <span className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                  {index + 1}
+                </span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
         </div>
-    </body>
-    </html>
+        <div className="flex-1">
+          <img src="/api/placeholder/300/600" alt="QuickBite App Demo" className="mx-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const TestimonialCard = ({ quote, author, role }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="flex items-center mb-4">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} className="text-yellow-400 w-5 h-5" />
+      ))}
+    </div>
+    <p className="text-gray-600 mb-4">"{quote}"</p>
+    <div>
+      <p className="font-bold">{author}</p>
+      <p className="text-sm text-gray-500">{role}</p>
+    </div>
+  </div>
+);
+
+const TestimonialsSection = () => (
+  <section className="py-20 bg-gray-100">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <TestimonialCard
+          quote="QuickBite has revolutionized how I consume content on my phone!"
+          author="Sarah L."
+          role="Busy Professional"
+        />
+        <TestimonialCard
+          quote="I can finally keep up with industry news during my commute."
+          author="Michael R."
+          role="Marketing Manager"
+        />
+        <TestimonialCard
+          quote="The summaries are spot-on and save me so much time."
+          author="Emily T."
+          role="Student"
+        />
+      </div>
+    </div>
+  </section>
+);
+
+const PricingCard = ({ title, price, features, cta }) => (
+  <div className="bg-white p-8 rounded-lg shadow-md">
+    <h3 className="text-2xl font-bold mb-4">{title}</h3>
+    <p className="text-4xl font-bold mb-6">{price}</p>
+    <ul className="space-y-2 mb-8">
+      {features.map((feature, index) => (
+        <li key={index} className="flex items-center">
+          <Check className="text-green-500 w-5 h-5 mr-2" />
+          <span>{feature}</span>
+        </li>
+      ))}
+    </ul>
+    <button className="w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition duration-300">
+      {cta}
+    </button>
+  </div>
+);
+
+const PricingSection = () => (
+  <section id="pricing" className="py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-bold text-center mb-12">Simple, Transparent Pricing</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <PricingCard
+          title="7 Day Trial"
+          price="Free"
+          features={[
+            "10 summaries per day",
+            "Basic summary length",
+            "Standard processing speed"
+          ]}
+          cta="Start Free Trial"
+        />
+        <PricingCard
+          title="Pro Plan"
+          price="$7.99/mo"
+          features={[
+            "Unlimited summaries",
+            "Adjustable summary length",
+            "Priority processing",
+            "Offline mode",
+            "Cross-device sync"
+          ]}
+          cta="Go Pro"
+        />
+      </div>
+    </div>
+  </section>
+);
+
+const Footer = () => (
+  <footer className="bg-gray-800 text-white py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 className="text-lg font-bold mb-4">QuickBite</h4>
+          <p className="text-sm">Instant summaries for the mobile age.</p>
+        </div>
+        <div>
+          <h4 className="text-lg font-bold mb-4">Product</h4>
+          <ul className="space-y-2">
+            <li><a href="#features" className="text-sm hover:text-blue-300">Features</a></li>
+            <li><a href="#pricing" className="text-sm hover:text-blue-300">Pricing</a></li>
+            <li><a href="#" className="text-sm hover:text-blue-300">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-lg font-bold mb-4">Company</h4>
+          <ul className="space-y-2">
+            <li><a href="#" className="text-sm hover:text-blue-300">About Us</a></li>
+            <li><a href="#" className="text-sm hover:text-blue-300">Careers</a></li>
+            <li><a href="#" className="text-sm hover:text-blue-300">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-lg font-bold mb-4">Legal</h4>
+          <ul className="space-y-2">
+            <li><a href="#" className="text-sm hover:text-blue-300">Privacy Policy</a></li>
+            <li><a href="#" className="text-sm hover:text-blue-300">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="mt-8 pt-8 border-t border-gray-700 text-center">
+        <p className="text-sm">&copy; 2024 QuickBite Summarizer. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+);
+
+const LandingPage = () => (
+  <div className="min-h-screen flex flex-col">
+    <Header />
+    <main className="flex-grow">
+      <HeroSection />
+      <FeaturesSection />
+      <HowItWorksSection />
+      <TestimonialsSection />
+      <PricingSection />
+    </main>
+    <Footer />
+  </div>
+);
+
+export default LandingPage;
