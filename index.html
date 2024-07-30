@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickBite Summarizer</title>
+    <title>Responsive Landing Page</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
@@ -173,22 +173,58 @@
             color: #6d28d9;
         }
 
+        /* 반응형 디자인을 위한 미디어 쿼리 추가 */
         @media (max-width: 768px) {
-            .feature, .services, .pricing {
-                flex-direction: column;
-            }
-            .feature-image, .feature-content, .service, .price-card {
-                width: 100%;
-                margin: 0 0 40px 0;
-            }
-            .feature-image {
-                margin-right: 0;
-                margin-bottom: 40px;
+            .container {
+                padding: 0 20px;
             }
 
-            /* Add this override to your existing media query */
-            .feature-content {
-                flex: none; /* Allow feature-content to take full width */ 
+            h1 {
+                font-size: 36px;
+            }
+
+            .header-description {
+                font-size: 16px;
+            }
+
+            .feature {
+                flex-direction: column;
+            }
+
+            .feature-image, .feature-content {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+
+            .services {
+                flex-direction: column;
+            }
+
+            .service {
+                margin: 0 0 20px 0;
+            }
+
+            .pricing {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .price-card {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* 더 작은 화면을 위한 추가 미디어 쿼리 */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
             }
         }
 
@@ -221,10 +257,8 @@
             </div>
                 <div class="feature-image">
                     <div style="text-align: center;">
-                        <!-- ... 기존 코드 ... -->
-                        <iframe width="400" height="400" src="https://www.youtube.com/embed/Lo8H8bGo0GU?rel=0" frameborder="0"
+                        <iframe width="100%" height="400" src="https://youtu.be/Lo8H8bGo0GU" frameborder="0"
                             allowfullscreen></iframe>
-                        <!-- ... 기존 코드 ... -->
                     </div>
 
             </section>
